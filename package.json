@@ -1,0 +1,21 @@
+{
+    "name": "simple-chat",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "start": "parcel src/chat.html  --port 8888",
+        "mlc-local": "parcel src/chat.html  --port 8888",
+        "build": "parcel build src/chat.html --dist-dir lib --no-content-hash"
+    },
+    "devDependencies": {
+        "buffer": "^5.7.1",
+        "parcel": "^2.8.3",
+        "process": "^0.11.10",
+        "tslib": "^2.3.1",
+        "typescript": "^4.9.5",
+        "url": "^0.11.3"
+    },
+    "dependencies": {
+        "@webonnx/wonnx-wasm": "^0.5.1"
+    }
+}
