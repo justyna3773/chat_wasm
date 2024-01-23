@@ -28,10 +28,11 @@ While TensorFlow.js and ONNX.js are existing efforts to bring machine learning t
 
 
 Interesting implementation which is in line with HuggingFace transformers library is Transformers.js. 
-*By default, Transformers.js uses hosted pretrained models and precompiled WASM binaries, which should work out-of-the-box. * https://huggingface.co/docs/transformers.js/custom_usage
+*By default, Transformers.js uses hosted pretrained models and precompiled WASM binaries, which should work out-of-the-box.* https://huggingface.co/docs/transformers.js/custom_usage
 
 Despite not taking advantage of available WebGPU I would recommend it for the sake of simplicity, impressive results and wide range of models supported. Check out some of their numerous examples, such as Whisper in the browser: https://huggingface.co/spaces/Xenova/whisper-web
 or translation model based on distilled gpt2 architecture (only 85 MB!): https://xenova.github.io/transformers.js/
+This small size of the model was obtained with quantization of the ONNX model.
 
 
 
@@ -69,3 +70,6 @@ Created with TVM approach:
   again, it is slow and downloading TinyLLama for example, takes 2 GB of your memory.
   I experimented with disabling GPU support - then the chat does not work at all. This undermines the idea that we can have one app to run on all hardwares.
 Anyway, this project seems to have a lot of potential and well documented workflow on how to add your own model library. I wanted to add a small BERT model, to make it decently good for conversations or question  but at the same time keep it as small as possible.  Despite my efforts, I wasn't successful in this attempt. [link to .ipynb notebook]
+
+- WONNX
+
